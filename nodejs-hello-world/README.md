@@ -15,7 +15,7 @@ docker run -p HOST_PORT:CONTAINER_PORT -d IMAGE_NAME:TAG_NAME
 ```
 
 ```
-docker run --name node-hello-world-app -p 8080:8080 node-hello-world-app:v1
+docker run --name nodejs-hello-world-app -p 3000:3000 nodejs-hello-world-app:v1
 ```
 
 #### Test:
