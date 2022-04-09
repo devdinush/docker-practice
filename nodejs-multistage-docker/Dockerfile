@@ -14,7 +14,7 @@ CMD [ "node", "server.js" ]
 
 ## Create for test ##
 
-FROM node:14.17.15 as test
+FROM node:14.17.5 as test
 
 WORKDIR /usr/src/app
 
