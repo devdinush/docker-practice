@@ -1,18 +1,37 @@
-## NodeJs Multistage Docker
+## Scaling Docker using Docker + Docker-compose + Docker Swarm
 
-### Build it for development
-
-```
-docker build --target development -t nodejs-multistage:development .
-```
-
-### Build it for test
-
-```
-docker build --target test -t nodejs-multistage:test .
+### Build Image
+    
+```bash
+docker-compose build
 ```
 
-### Build it for production
+### Initialize the Swarm
+
+```bash
+docker swarm init
 ```
-docker build --target production -t nodejs-multistage:production .
+
+### Create Service
+
+```bash
+docker stack deploy -c docker-compose.yml nodejs-docker-compose-swarm
+```
+
+### Check Service list
+
+    
+```bash
+docker service ls\
+```
+
+### Scaling the Service
+
+```bash
+docker service scale nodejs-docker-compose-swarm=20
+```
+### Delete the Service
+
+```bash
+docker service rm <service_id>
 ```
