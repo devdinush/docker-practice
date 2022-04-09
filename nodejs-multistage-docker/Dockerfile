@@ -18,7 +18,7 @@ FROM node:14.17.5 as test
 
 WORKDIR /usr/src/app
 
-COPY --from=development /usr/src/ .
+COPY --from=development /usr/src/app/ .
 
 CMD [ "npm", "run" , "test" ]
 
